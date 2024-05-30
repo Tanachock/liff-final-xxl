@@ -1,0 +1,14 @@
+.top-animelist{
+    display: flex;
+    overflow-x: auto;
+}
+.top-animelist div{
+    display: flex; 
+} 
+img{
+    border-radius: 5px;
+    width: 100px;
+}
+.img-a{
+    margin: 5px;
+}

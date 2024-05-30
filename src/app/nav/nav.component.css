@@ -1,0 +1,20 @@
+nav{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+input{
+    border-radius: 5px;
+    border: 0;
+    width: 10%;
+    max-width: 350px;
+    padding-left: 10px;
+    outline: 0;
+    height: 70%;
+    margin-left: 10px;
+    background-color: rgba(162, 160, 160, 0.639);
+}
+input:focus{
+    width: 90%;
+    transition: 0.2s;
+}

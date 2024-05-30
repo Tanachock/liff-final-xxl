@@ -1,0 +1,28 @@
+<nav>
+    <input placeholder="Search anime" [(ngModel)]="nameAnime" value="nameAnime" (input)="searchAnime()" >
+</nav>
+<div class="Search-anime" *ngIf="issearchAnime; else NotSearch">
+    <app-searchanime [allanime]="Animelist"></app-searchanime>
+</div>
+<ng-template #NotSearch>
+    <div class="container">
+        <div class="Profile">
+            <div class="profile-data">
+                <div class="my-img">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
+                </div>
+                <div>
+                    <p>Name</p>
+                </div>
+            </div>
+        </div>
+        <div class="topic-anime">
+            <h2>Top 10 Anime</h2>
+        </div>
+        <app-topanime></app-topanime> 
+        <div class="topic-season">
+            <h2>Anime now season</h2>
+        </div> 
+        <app-animeseason></app-animeseason>
+    </div>
+</ng-template>

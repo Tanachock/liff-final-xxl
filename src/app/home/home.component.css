@@ -1,0 +1,68 @@
+nav{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+input{
+    border-radius: 5px;
+    border: 0;
+    width: 10%;
+    max-width: 350px;
+    padding-left: 10px;
+    outline: 0;
+    height: 70%;
+    margin-left: 10px;
+    background-color: rgba(162, 160, 160, 0.639);
+}
+input:focus{
+    width: 90%;
+    transition: 0.2s;
+}
+
+.container{
+    margin: 5px;
+}
+.Profile{
+    display: flex;
+    justify-content: center;
+}
+.profile-data{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%;
+    /* filter: blur(2px); */
+    /* -webkit-filter: blur(8px); */
+
+}
+.profile-data p{
+    color: white;
+}
+.my-img img{ 
+    margin-top: 10px;
+    border-radius: 20px;
+    width: 150px;
+}
+.Profile p{
+    text-align: center;
+}
+
+.topic-anime{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: auto;
+    color: white;
+    /* background-color: rgb(25, 75, 121); */
+} 
+
+.topic-season{
+    display: flex;
+    align-items:center;
+    height: 80px;
+    width: auto;
+    /* background-color: rgb(25, 75, 121); */
+    gap: 10px;
+    color: white;
+}

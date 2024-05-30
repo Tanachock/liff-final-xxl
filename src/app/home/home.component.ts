@@ -83,12 +83,11 @@ export class HomeComponent implements OnInit{
       if(liff.isLoggedIn()){
         liff.getProfile().then( profile =>{
           this.profile = profile;
+          console.log(liff.getIDToken())
         }).catch(console.error);
       }else{
         liff.login()
       }
     }).catch(console.error);
-    this.img_profile = liff.getIDToken()
-    console.log(this.img_profile)
   }
 }

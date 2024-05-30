@@ -78,12 +78,10 @@ export class HomeComponent implements OnInit{
   lineliff(){
     liff.init({liffId:'2005412151-w4nvPAZm'}).then(()=>{
       this.os=liff.getOS();
-      const idToken = liff.getDecodedIDToken();
-      console.log(idToken);
       if(liff.isLoggedIn()){
         liff.getProfile().then( profile =>{
           this.profile = profile;
-          console.log(liff.getIDToken())
+          console.log(this.profile)
         }).catch(console.error);
       }else{
         liff.login()

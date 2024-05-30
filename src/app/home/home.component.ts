@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit{
   nameAnime:string = ""
   issearchAnime: boolean = false
   Animelist: DataAnime[] = []
+  img_profile: any
   seasons = ['winter', 'spring', 'summer', 'fall']
 
   onSearch = new Subject<string>();
@@ -87,5 +88,7 @@ export class HomeComponent implements OnInit{
         liff.login()
       }
     }).catch(console.error);
+    this.img_profile = liff.getIDToken()
+    console.log(this.img_profile)
   }
 }

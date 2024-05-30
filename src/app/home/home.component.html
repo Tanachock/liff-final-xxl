@@ -8,11 +8,11 @@
     <div class="container">
         <div class="Profile">
             <div class="profile-data">
-                <div class="my-img">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png">
+                <div class="my-img" [(ngModel)]="img_profile" value="img_profile">
+                    <img src="{{img_profile}}">
                 </div>
                 <div>
-                    <p>Name</p>
+                    <p [(ngModel)]="displayName" value="displayName">{{displayName}}</p>
                 </div>
             </div>
         </div>

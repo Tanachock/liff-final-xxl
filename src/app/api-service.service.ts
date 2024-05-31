@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiServiceService {
+  baseApi = 'https://api.jikan.moe/v4/seasons/';
 
   constructor(private http: HttpClient) { }
 

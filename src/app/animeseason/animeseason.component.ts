@@ -19,11 +19,7 @@ export class AnimeseasonComponent {
 
   constructor(private apiService: ApiServiceService, private router: Router) { }
   
-  season: string = ""
-  year: string = ""
-  animelisttop: any
-  animeseason: any
-  animeseasonnow: any
+  animelistseason: any
   seasons = ['winter', 'spring', 'summer', 'fall']
 
   ngOnInit(): void {
@@ -31,9 +27,9 @@ export class AnimeseasonComponent {
   }
   getSeasonnow(){
     this.apiService.getSeasonNow().subscribe((res:any)=>{
-      this.animelisttop = res.data;
+      this.animelistseason = res.data;
       // console.log(res.data)
-      this.convertData(this.animelisttop)
+      this.convertData(this.animelistseason)
     })
   }
 

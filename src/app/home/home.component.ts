@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit{
   nameAnime:string = ""
   issearchAnime: boolean = false
   Animelist: DataAnime[] = []
-  img_profile: any
+  img_profile: any = ""
   displayName: string = ""
   seasons = ['winter', 'spring', 'summer', 'fall']
 

@@ -3,10 +3,25 @@ nav{
     align-items: center;
     height: 40px;
 }
+.title-nav{
+    margin-left: 10px;
+}
+.clickSeach{
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+}
+.btn-search{
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+}
 input{
+    margin-top: 5px;
     border-radius: 5px;
     border: 0;
-    width: 10%;
+    width: 80%;
+    height: 100px;
     max-width: 350px;
     padding-left: 10px;
     outline: 0;
@@ -14,10 +29,10 @@ input{
     margin-left: 10px;
     background-color: rgba(162, 160, 160, 0.639);
 }
-input:focus{
-    width: 90%;
+/* input:focus{
+    width: 80%;
     transition: 0.2s;
-}
+} */
 
 .container{
     margin: 5px;

@@ -1,5 +1,12 @@
 <nav>
-    <input placeholder="Search anime" [(ngModel)]="nameAnime" value="nameAnime" (input)="searchAnime()" >
+    <div class="clickSeach" *ngIf="isclickSearch; else NotClick">
+        <a class="btn-back-search" (click)="backtohome()" style="color: white;">Back</a>
+        <input placeholder="Search anime" [(ngModel)]="nameAnime" value="nameAnime" (input)="searchAnime()" >
+    </div>
+    <ng-template #NotClick>
+        <h4 class="title-nav" style="color: white;">Netflix {{displayName}}</h4>
+        <a class="btn-search" style="color: white;" (click)="clickSearch()">Search</a>
+    </ng-template>
 </nav>
 <div class="Search-anime" *ngIf="issearchAnime; else NotSearch">
     <app-searchanime [allanime]="Animelist"></app-searchanime>
@@ -10,19 +17,15 @@
             <div class="profile-data">
                 <div class="my-img">
                     <img src="{{img_profile}}">
+                    <!-- <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"> -->
                 </div>
                 <div>
-                    <p>{{displayName}}</p>
+                    <p>{{displayName}}</p> 
+                    <!-- <p>Name</p> -->
                 </div>
             </div>
         </div>
-        <div class="topic-anime">
-            <h2>Top 10 Anime</h2>
-        </div>
         <app-topanime></app-topanime> 
-        <div class="topic-season">
-            <h2>Anime now season</h2>
-        </div> 
         <app-animeseason></app-animeseason>
     </div>
 </ng-template>

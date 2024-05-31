@@ -1,6 +1,12 @@
 <div class="container-top">
+    <div class="topic-anime">
+            <h2>Top 10 Anime</h2>
+    </div>
     <div class="top-animelist">
-        <div class="img-a" *ngFor="let n of Animelist"><img src="{{n.image_url}}"></div>
+        <!-- <img src="{{n.image_url}}"> -->
+        <div class="img-a" >
+            <img *ngFor="let n of Animelist" src="{{n.image_url}}">
+        </div>
     </div>
 </div>
 

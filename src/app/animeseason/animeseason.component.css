@@ -1,15 +1,18 @@
-
-.season-anime{
-    display: flex;
+.img-a{
+    display: flex; 
     overflow-x: auto;
-}
-.season-anime div{
-    display: flex;
-}
+} 
 img{
     border-radius: 5px;
-    width: 100px;
+    width: 150px;
+    margin-left: 10px;
 }
-.img-a{
-    margin: 5px;
+h2{
+    color: white;
 }
+
+@media only screen and (min-width: 768px) {
+    img{
+        width: 100%;
+    }
+  }

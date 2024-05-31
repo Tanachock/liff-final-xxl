@@ -28,6 +28,7 @@ export class HomeComponent implements OnInit{
   Animelist: DataAnime[] = []
   img_profile: any = ""
   displayName: string = ""
+  isclickSearch: boolean = false
   seasons = ['winter', 'spring', 'summer', 'fall']
 
   onSearch = new Subject<string>();
@@ -74,6 +75,13 @@ export class HomeComponent implements OnInit{
     }else{
       this.issearchAnime=false
     }
+  }
+  clickSearch(){
+    this.isclickSearch = true
+  }
+  backtohome(){
+    this.isclickSearch = false
+    this.issearchAnime=false
   }
 
   lineliff(){

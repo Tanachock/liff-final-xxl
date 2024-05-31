@@ -12,7 +12,7 @@ export interface DataAnime {
   image_url: any;
   genres: string;
 }
-type UnPromise<T> = T extends Promise<infer X>? X : T;
+//type UnPromise<T> = T extends Promise<infer X>? X : T;
 
 @Component({
   selector: 'app-home',
@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit{
 
   onSearch = new Subject<string>();
   os: ReturnType<typeof liff.getOS>;  
-  profile: UnPromise<ReturnType<typeof liff.getProfile>> | undefined;
+  //profile: UnPromise<ReturnType<typeof liff.getProfile>> | undefined;
 
 
   constructor(private apiService: ApiServiceService, private router: Router) { 
@@ -81,10 +81,10 @@ export class HomeComponent implements OnInit{
       this.os=liff.getOS();
       if(liff.isLoggedIn()){
         liff.getProfile().then( profile =>{
-          this.profile = profile;
-          console.log(this.profile)
-          this.img_profile = this.profile.pictureUrl
-          this.displayName = this.profile.displayName
+          //this.profile = profile;
+          //console.log(this.profile)
+          this.img_profile = profile.pictureUrl
+          this.displayName = profile.displayName
         }).catch(console.error);
       }else{
         liff.login()

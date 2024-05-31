@@ -4,8 +4,8 @@
     </div>
     <div class="top-animelist">
         <!-- <img src="{{n.image_url}}"> -->
-        <div class="img-a" >
-            <img *ngFor="let n of Animelist" src="{{n.image_url}}">
+        <div class="img-a">
+            <img (click)="selectAnime(n.image_url,n.title,n.trailer,n.synopsis)" *ngFor="let n of Animelist" src="{{n.image_url}}">
         </div>
     </div>
 </div>

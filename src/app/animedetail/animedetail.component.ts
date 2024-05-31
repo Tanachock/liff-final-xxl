@@ -1,0 +1,32 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-animedetail',
+  templateUrl: './animedetail.component.html',
+  styleUrls: ['./animedetail.component.css']
+})
+export class AnimedetailComponent implements OnInit {
+  animelist: any[] = [];
+  routerStateDataId: any;
+  img_anime: any
+  title_anime: string = ""
+  trailer_anime: any;
+  synopsis_anime : string = ""
+
+  constructor(private router: Router) {
+  }
+
+
+  ngOnInit(): void {
+    this.img_anime = history.state['img'];
+    this.title_anime = history.state['title']
+    this.trailer_anime = history.state['trailer'];
+    this.synopsis_anime = history.state['synopsis']
+    console.log(this.img_anime)
+    console.log(this.title_anime);
+    console.log(this.trailer_anime);
+    console.log(this.synopsis_anime);
+  }
+}
+

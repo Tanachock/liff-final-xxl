@@ -10,6 +10,7 @@ import { TopanimeComponent } from './topanime/topanime.component';
 import { AnimeseasonComponent } from './animeseason/animeseason.component';
 import { NavComponent } from './nav/nav.component';
 import { SearchanimeComponent } from './searchanime/searchanime.component';
+import { AnimedetailComponent } from './animedetail/animedetail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchanimeComponent } from './searchanime/searchanime.component';
     TopanimeComponent,
     AnimeseasonComponent,
     NavComponent,
-    SearchanimeComponent
+    SearchanimeComponent,
+    AnimedetailComponent
   ],
   imports: [
     BrowserModule,

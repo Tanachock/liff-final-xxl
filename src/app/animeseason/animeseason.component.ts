@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 export interface DataAnime {
   title: string;
@@ -9,6 +9,8 @@ export interface DataAnime {
   score: number;
   image_url: any;
   genres: string;
+  trailer: any;
+  synopsis:string;
 }
 @Component({
   selector: 'app-animeseason',
@@ -47,8 +49,21 @@ export class AnimeseasonComponent {
         'score': data[i]["score"] || "-",
         'image_url': data[i]["images"]?.jpg?.image_url || "-",
         'genres': data[i]["genres"] || [],
+        'trailer': data[i]["trailer"]['url']||"",
+        'synopsis': data[i]["synopsis"]||""
       })
     }
     this.Animelist = _data;
+}
+selectAnime(img:any,titel:string,trailer:any,synopsis:string){
+  // console.log('click anime')
+  const navigationExtras: NavigationExtras = {
+    state: { img: img,
+      title: titel,
+      trailer: trailer,
+      synopsis: synopsis
+    }
+  };
+  this.router.navigate(['/animedetail'],navigationExtras);
 }
 }

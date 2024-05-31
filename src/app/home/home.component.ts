@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit{
   seasons = ['winter', 'spring', 'summer', 'fall']
 
   onSearch = new Subject<string>();
+
   os: ReturnType<typeof liff.getOS>;  
   //profile: UnPromise<ReturnType<typeof liff.getProfile>> | undefined;
 

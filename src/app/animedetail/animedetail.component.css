@@ -1,0 +1,7 @@
+.container-img{
+    display: flex;
+    justify-content: center;
+}
+.container-title{
+    text-align: center;
+}

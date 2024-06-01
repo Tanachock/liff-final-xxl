@@ -105,6 +105,8 @@ export class HomeComponent implements OnInit{
     }).catch(console.error);
   }
   Lifflogout(){
-    
+    if (liff.isLoggedIn()) {
+      liff.logout();
+    }
   }
 }

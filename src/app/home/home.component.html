@@ -4,8 +4,9 @@
         <input placeholder="Search anime" [(ngModel)]="nameAnime" value="nameAnime" (input)="searchAnime()" >
     </div>
     <ng-template #NotClick>
-        <h4 class="title-nav" style="color: white;">Netflix {{displayName}}</h4>
+        <!-- <h4 class="title-nav" style="color: white;">Netflix {{displayName}}</h4> -->
         <a class="btn-search" style="color: white;" (click)="clickSearch()">Search</a>
+        <a class="logout">Logout</a>
     </ng-template>
 </nav>
 <div class="Search-anime" *ngIf="issearchAnime; else NotSearch">

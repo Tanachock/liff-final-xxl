@@ -11,12 +11,12 @@ nav{
     height: 100%;
     margin-left: 10px;
 }
-/* .btn-search{
+.btn-search{
     position: absolute;
     right: 0;
     margin-right: 10px;
     cursor: pointer;
-} */
+}
 .logout{
     color: white;
 }

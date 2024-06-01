@@ -17,6 +17,9 @@ nav{
     margin-right: 10px;
     cursor: pointer;
 }
+.logout{
+    color: white;
+}
 input{
     margin-top: 5px;
     border-radius: 5px;

@@ -15,6 +15,7 @@ nav{
     position: absolute;
     right: 0;
     margin-right: 10px;
+    cursor: pointer;
 }
 input{
     margin-top: 5px;

@@ -11,6 +11,8 @@ export interface DataAnime {
   score: number;
   image_url: any;
   genres: string;
+  trailer: any;
+  synopsis:string;
 }
 //type UnPromise<T> = T extends Promise<infer X>? X : T;
 
@@ -63,6 +65,8 @@ export class HomeComponent implements OnInit{
         'score': data[i]["score"] || "-",
         'image_url': data[i]["images"]?.jpg?.image_url || "-",
         'genres': data[i]["genres"] || [],
+        'trailer': data[i]["trailer"]['url']||"",
+        'synopsis': data[i]["synopsis"]||""
       })
     }
     this.Animelist = _data;

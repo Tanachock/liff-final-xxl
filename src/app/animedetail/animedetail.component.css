@@ -5,3 +5,11 @@
 .container-title{
     text-align: center;
 }
+.con-b2h{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+.backtohome{
+    cursor: pointer;
+}

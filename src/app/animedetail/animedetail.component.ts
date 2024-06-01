@@ -28,5 +28,9 @@ export class AnimedetailComponent implements OnInit {
     console.log(this.trailer_anime);
     console.log(this.synopsis_anime);
   }
+
+  back2home(){
+    this.router.navigate(['/home']);
+  }
 }
 

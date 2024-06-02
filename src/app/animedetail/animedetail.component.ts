@@ -42,7 +42,7 @@ export class AnimedetailComponent implements OnInit {
   ]).catch((err) => {
     console.log("error", err);
   });
-  liff.closeWindow();
+  // liff.closeWindow();
   }
 }
 

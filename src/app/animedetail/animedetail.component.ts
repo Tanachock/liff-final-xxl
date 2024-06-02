@@ -40,6 +40,7 @@ export class AnimedetailComponent implements OnInit {
       text: "Hello, World!",
     },
   ])
+  liff.closeWindow();
   }
 }
 

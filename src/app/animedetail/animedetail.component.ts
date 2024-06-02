@@ -39,7 +39,9 @@ export class AnimedetailComponent implements OnInit {
       type: "text",
       text: "Hello, World!",
     },
-  ])
+  ]).catch((err) => {
+    console.log("error", err);
+  });
   liff.closeWindow();
   }
 }

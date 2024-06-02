@@ -1,12 +1,16 @@
 <nav>
     <div class="clickSeach" *ngIf="isclickSearch; else NotClick">
-        <a class="btn-back-search" (click)="backtohome()" style="color: white;">Back</a>
+        <div class="SearchBack">
+            <a class="btn-back-search" (click)="backtohome()" style="color: white;"><mat-icon>arrow_back_ios</mat-icon></a>
+        </div>
+        <!-- <a class="btn-back-search" (click)="backtohome()" style="color: white;">Back</a> -->
         <input placeholder="Search anime" [(ngModel)]="nameAnime" value="nameAnime" (input)="searchAnime()" >
     </div>
     <ng-template #NotClick>
         <!-- <h4 class="title-nav" style="color: white;">Netflix {{displayName}}</h4> -->
         <a (click)="Lifflogout()" class="logout">Logout</a>
-        <a class="btn-search" style="color: white;" (click)="clickSearch()">Search</a>
+        <a class="btn-search" (click)="clickSearch()" style="color: white;"><mat-icon>search</mat-icon></a>
+        <!-- <a class="btn-search" style="color: white;" (click)="clickSearch()">Search</a> -->
     </ng-template>
 </nav>
 <div class="Search-anime" *ngIf="issearchAnime; else NotSearch">

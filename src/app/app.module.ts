@@ -11,6 +11,8 @@ import { AnimeseasonComponent } from './animeseason/animeseason.component';
 import { NavComponent } from './nav/nav.component';
 import { SearchanimeComponent } from './searchanime/searchanime.component';
 import { AnimedetailComponent } from './animedetail/animedetail.component';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AnimedetailComponent } from './animedetail/animedetail.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,18 +1,24 @@
 <div class="container">
     <div class="con-b2h">
-        <a class="backtohome" (click)="back2home()" style="color: white;">Back</a>
+        <div class="div-close">
+            <a (click)="back2home()">
+                <mat-icon>close</mat-icon>
+            </a>
+        </div>
+        <!-- <a class="backtohome" (click)="back2home()" style="color: white;">Back</a> -->
     </div>
     <div class="container-img">
         <img src="{{img_anime}}">
     </div>
     <div class="container-title">
         <h3 style="color: white;">{{title_anime}}</h3>
-        <a style="color: white" (click)="sendtoline()">Send to Line</a>
+        <a class="sendmss" style="color: white" (click)="sendtoline()">Send to Line</a>
     </div>
         <div class="text">
-            <details style="color: white;">
+            <p style="color: white;">{{synopsis_anime}}</p>
+            <!-- <details style="color: white;">
                 <summary>Synopsis</summary>
-                <p style="color: white;">{{synopsis_anime}}</p>
-            </details>
+                
+            </details> -->
     </div>
 </div> 

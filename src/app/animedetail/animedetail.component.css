@@ -10,6 +10,31 @@
     justify-content: end;
     margin-right: 10px;
 }
-.backtohome{
+.con-b2h a{
+    /* padding: 3px; */
+    color: white;
     cursor: pointer;
+}
+.div-close{
+    margin-top: 5px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: max-content;
+    width: 40px;
+    background-color: rgba(107, 107, 107, 0.599);
+}
+.backtohome:active{
+    padding: 8px;
+}
+.sendmss{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(136, 136, 136, 0.816);
+}
+.sendmss:active{
+    padding: 8px;
 }

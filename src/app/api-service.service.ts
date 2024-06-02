@@ -5,14 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiServiceService {
-  baseApi = 'https://api.jikan.moe/v4/seasons/';
 
   constructor(private http: HttpClient) { }
 
-  getSeason(year:string,season: string){
-
-    return this.http.get(`https://api.jikan.moe/v4/seasons/${year}/${season}`)
-  }
   getSearchanime(nameAnime: string){
     console.log(nameAnime)
     return this.http.get(`https://api.jikan.moe/v4/anime?q=${nameAnime}`)

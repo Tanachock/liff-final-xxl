@@ -6,15 +6,11 @@ import liff from '@line/liff';
 
 export interface DataAnime {
   title: string;
-  aired: string;
-  episodes: number;
-  score: number;
   image_url: any;
-  genres: string;
   trailer: any;
   synopsis:string;
 }
-//type UnPromise<T> = T extends Promise<infer X>? X : T;
+
 
 @Component({
   selector: 'app-home',
@@ -22,8 +18,6 @@ export interface DataAnime {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-  season: string = ""
-  year: string = ""
   animes: any
   nameAnime:string = ""
   issearchAnime: boolean = false
@@ -31,13 +25,9 @@ export class HomeComponent implements OnInit{
   img_profile: any = ""
   displayName: string = ""
   isclickSearch: boolean = false
-  os: ReturnType<typeof liff.getOS>;  
   seasons = ['winter', 'spring', 'summer', 'fall']
 
   onSearch = new Subject<string>();
-
-  // os: ReturnType<typeof liff.getOS>;  
-  //profile: UnPromise<ReturnType<typeof liff.getProfile>> | undefined;
 
 
   constructor(private apiService: ApiServiceService, private router: Router) { 
@@ -61,17 +51,13 @@ export class HomeComponent implements OnInit{
     for(let i=0;i<data.length;i++){
       _data.push({
         'title': data[i]["title"] || "-",
-        'aired': data[i]["aired"] || {},
-        'episodes': data[i]["episodes"] || "-",
-        'score': data[i]["score"] || "-",
         'image_url': data[i]["images"]?.jpg?.image_url || "-",
-        'genres': data[i]["genres"] || [],
         'trailer': data[i]["trailer"]['url']||"",
         'synopsis': data[i]["synopsis"]||""
       })
     }
     this.Animelist = _data;
-    console.log(this.Animelist)
+    // console.log(this.Animelist)
   }
 
   searchAnime(){
@@ -92,8 +78,6 @@ export class HomeComponent implements OnInit{
 
   lineliff(){
     liff.init({liffId:'2005412151-w4nvPAZm'}).then(()=>{
-      this.os=liff.getOS();
-      console.log(this.os)
       if(liff.isLoggedIn()){
         liff.getProfile().then( profile =>{
           this.img_profile = profile.pictureUrl

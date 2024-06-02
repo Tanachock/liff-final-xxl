@@ -31,11 +31,12 @@ export class HomeComponent implements OnInit{
   img_profile: any = ""
   displayName: string = ""
   isclickSearch: boolean = false
+  os: ReturnType<typeof liff.getOS>;  
   seasons = ['winter', 'spring', 'summer', 'fall']
 
   onSearch = new Subject<string>();
 
-  os: ReturnType<typeof liff.getOS>;  
+  // os: ReturnType<typeof liff.getOS>;  
   //profile: UnPromise<ReturnType<typeof liff.getProfile>> | undefined;
 
 
@@ -92,10 +93,9 @@ export class HomeComponent implements OnInit{
   lineliff(){
     liff.init({liffId:'2005412151-w4nvPAZm'}).then(()=>{
       this.os=liff.getOS();
+      console.log(this.os)
       if(liff.isLoggedIn()){
         liff.getProfile().then( profile =>{
-          //this.profile = profile;
-          //console.log(this.profile)
           this.img_profile = profile.pictureUrl
           this.displayName = profile.displayName
         }).catch(console.error);

@@ -37,7 +37,7 @@ export class AnimedetailComponent implements OnInit {
     liff.sendMessages([
     {
       type: "text",
-      text: "Hello, World!",
+      text: this.title_anime,
     },
   ])
   .then(() => {

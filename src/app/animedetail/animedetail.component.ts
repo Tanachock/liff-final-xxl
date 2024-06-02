@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import liff from '@line/liff';
 
 @Component({
   selector: 'app-animedetail',
@@ -31,6 +32,14 @@ export class AnimedetailComponent implements OnInit {
 
   back2home(){
     this.router.navigate(['/home']);
+  }
+  sendtoline(){
+    liff.sendMessages([
+    {
+      type: "text",
+      text: "Hello, World!",
+    },
+  ])
   }
 }
 

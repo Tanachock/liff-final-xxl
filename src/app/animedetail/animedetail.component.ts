@@ -35,6 +35,11 @@ export class AnimedetailComponent implements OnInit {
   }
   sendtoline(){
     liff.sendMessages([
+      {
+        type: "image",
+        originalContentUrl: this.img_anime, 
+        previewImageUrl: this.img_anime 
+      },
     {
       type: "text",
       text: this.title_anime,

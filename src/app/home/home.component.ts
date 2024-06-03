@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit{
       })
     }
     this.Animelist = _data;
-    // console.log(this.Animelist)
+    console.log(this.Animelist)
   }
 
   searchAnime(){

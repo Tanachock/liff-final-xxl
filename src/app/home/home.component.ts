@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.lineliff()
+    // this.lineliff()
  }
   
   convertData(data: any) {
@@ -76,17 +76,13 @@ export class HomeComponent implements OnInit{
     this.issearchAnime=false
   }
 
-  lineliff(){
-    liff.init({liffId:'2005412151-w4nvPAZm'}).then(()=>{
+  liffgetProfile(){
       if(liff.isLoggedIn()){
         liff.getProfile().then( profile =>{
           this.img_profile = profile.pictureUrl
           this.displayName = profile.displayName
         }).catch(console.error);
-      }else{
-        liff.login()
       }
-    }).catch(console.error);
   }
   Lifflogout(){
     if (liff.isLoggedIn()) {

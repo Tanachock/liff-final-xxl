@@ -84,6 +84,7 @@ export class HomeComponent implements OnInit{
         this.displayName = profile.displayName
       }).catch(console.error);
     }
+    console.log(this.img_profile," ", this.displayName)
   }
   /*liff(){
     liff.init({liffId:'2005412151-w4nvPAZm'}).then(()=>{

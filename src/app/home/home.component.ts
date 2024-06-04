@@ -3,7 +3,6 @@ import { ApiServiceService } from '../api-service.service';
 import { Router } from '@angular/router';
 import { Subject, switchMap } from 'rxjs';
 import liff from '@line/liff';
-import { LiffService } from '../liff.service';
 
 export interface DataAnime {
   title: string;
@@ -31,7 +30,7 @@ export class HomeComponent implements OnInit{
   onSearch = new Subject<string>();
 
 
-  constructor(private apiService: ApiServiceService, private router: Router, private liffService: LiffService) { 
+  constructor(private apiService: ApiServiceService, private router: Router) { 
     this.onSearch.pipe(
       switchMap(nameAnime => {
         return this.apiService.getSearchanime(nameAnime);

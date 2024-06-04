@@ -12,6 +12,6 @@ export class AppComponent implements OnInit{
   constructor(private liffService: LiffService) {}
   
   ngOnInit(){
-    // this.liffService.lineliff()
+    this.liffService.lineliff()
   }
 }

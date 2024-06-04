@@ -44,7 +44,6 @@ export class HomeComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.liffService.lineliff()
  }
   
   convertData(data: any) {
@@ -90,6 +89,9 @@ export class HomeComponent implements OnInit{
     }).catch(console.error);
   }*/
   Lifflogout(){
-    this.liffService.Lifflogout()
+    if (liff.isLoggedIn()) {
+      liff.logout();
+      liff.closeWindow();
+    }
   }
 }

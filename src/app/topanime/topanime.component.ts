@@ -31,7 +31,7 @@ export class TopanimeComponent implements OnInit{
   }
 
   Animelist: DataAnime[] = [
-    {
+    /*{
       'title': 'Sousou no Frieren',
       'image_url': 'https://cdn.myanimelist.net/images/anime/1015/138006.jpg',
       'trailer': '',
@@ -89,7 +89,7 @@ export class TopanimeComponent implements OnInit{
       'image_url': 'https://cdn.myanimelist.net/images/anime/1976/142016.jpg',
       'trailer': '',
       'synopsis': 'The 150-year-long stalemate between the two interstellar superpowers, the Galactic Empire and the Free Planets Alliance, comes to an end when a new generation of leaders arises: the idealistic military genius Reinhard von Lohengramm, and the FPAs reserved historian, Yang Wenli.',
-    }
+    }*/
   ]
   // Animelistseasonnow: DataAnime[] = []
   convertData(data: any) {

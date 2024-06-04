@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit{
   animes: any
   nameAnime:string = ""
   issearchAnime: boolean = false
-  Animelist: DataAnime[] = [{'title': 'Kono Subarashii Sekai ni Shukufuku wo!',
+  Animelist: DataAnime[] = [/*{'title': 'Kono Subarashii Sekai ni Shukufuku wo!',
   'image_url': 'https://cdn.myanimelist.net/images/anime/1895/142748.jpg',
   'trailer': 'https://www.youtube.com/watch?v=NU87y-38glA',
   'synopsis': 'After dying a laughable and pathetic death on his way back from buying a game, high school student and recluse Kazuma Satou finds himself sitting before a beautiful but obnoxious goddess named Aqua. She provides the NEET with two options: continue on to heaven or reincarnate in every gamer s dream—a real fantasy world! Choosing to start a new life, Kazuma is quickly tasked with defeating a Demon King who is terrorizing villages. But before he goes, he can choose one item of any kind to aid him in his quest, and the future hero selects Aqua. But Kazuma has made a grave mistake—Aqua is completely useless!'},
@@ -120,7 +120,7 @@ export class HomeComponent implements OnInit{
     'image_url': 'https://cdn.myanimelist.net/images/anime/1976/142016.jpg',
     'trailer': '',
     'synopsis': 'The 150-year-long stalemate between the two interstellar superpowers, the Galactic Empire and the Free Planets Alliance, comes to an end when a new generation of leaders arises: the idealistic military genius Reinhard von Lohengramm, and the FPAs reserved historian, Yang Wenli.',
-  }
+  }*/
 ]
   img_profile: any = ""
   displayName: string = ""

@@ -37,7 +37,7 @@ export class AnimeseasonComponent {
   }
 
   Animelist: DataAnime[] = [
-    {'title': 'Kono Subarashii Sekai ni Shukufuku wo!',
+    /*{'title': 'Kono Subarashii Sekai ni Shukufuku wo!',
     'image_url': 'https://cdn.myanimelist.net/images/anime/1895/142748.jpg',
     'trailer': 'https://www.youtube.com/watch?v=NU87y-38glA',
     'synopsis': 'After dying a laughable and pathetic death on his way back from buying a game, high school student and recluse Kazuma Satou finds himself sitting before a beautiful but obnoxious goddess named Aqua. She provides the NEET with two options: continue on to heaven or reincarnate in every gamer s dream—a real fantasy world! Choosing to start a new life, Kazuma is quickly tasked with defeating a Demon King who is terrorizing villages. But before he goes, he can choose one item of any kind to aid him in his quest, and the future hero selects Aqua. But Kazuma has made a grave mistake—Aqua is completely useless!'},
@@ -77,7 +77,7 @@ export class AnimeseasonComponent {
     {'title': 'Sentai Daishikkaku',
     'image_url': 'https://cdn.myanimelist.net/images/anime/1183/141489.jpg',
     'trailer': '',
-    'synopsis': 'For the past 13 years, the Nefarious Monster Army have appeared beneath their floating fortress every Sunday to advance their goal of conquering Earth. Luckily, the Dragon Keepers are here to save the day! Having defeated the majority of the monsters during their initial invasion, the heroes now routinely show up to clear away any remnants of resistance. Unbeknownst to the public, however, every fight beyond the first has been a deliberate show put on by both sides: the Dragon Keepers reap the fame and prestige from fighting imaginary enemies, while the surviving weakest monsters, altogether called Dusters, are allowed to live for another day.'},
+    'synopsis': 'For the past 13 years, the Nefarious Monster Army have appeared beneath their floating fortress every Sunday to advance their goal of conquering Earth. Luckily, the Dragon Keepers are here to save the day! Having defeated the majority of the monsters during their initial invasion, the heroes now routinely show up to clear away any remnants of resistance. Unbeknownst to the public, however, every fight beyond the first has been a deliberate show put on by both sides: the Dragon Keepers reap the fame and prestige from fighting imaginary enemies, while the surviving weakest monsters, altogether called Dusters, are allowed to live for another day.'},*/
   ]
   // Animelistseasonnow: DataAnime[] = []
   convertData(data: any) {

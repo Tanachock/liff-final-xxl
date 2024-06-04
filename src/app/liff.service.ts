@@ -15,4 +15,11 @@ export class LiffService {
       }
     }).catch(console.error);
   }
+
+  Lifflogout(){
+    if (liff.isLoggedIn()) {
+      liff.logout();
+      liff.closeWindow();
+    }
+  }
 }

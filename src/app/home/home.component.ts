@@ -76,6 +76,14 @@ export class HomeComponent implements OnInit{
     this.issearchAnime=false
   }
 
+  getProfile(){
+    if(liff.isLoggedIn()){
+      liff.getProfile().then( profile =>{
+        this.img_profile = profile.pictureUrl
+        this.displayName = profile.displayName
+      }).catch(console.error);
+    }
+  }
   /*liff(){
     liff.init({liffId:'2005412151-w4nvPAZm'}).then(()=>{
       if(liff.isLoggedIn()){

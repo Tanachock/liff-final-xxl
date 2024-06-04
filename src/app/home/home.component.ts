@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit{
 
 
   ngOnInit(): void {
-    this.getProfile()
+    this.liff()
  }
   
   convertData(data: any) {
@@ -76,15 +76,7 @@ export class HomeComponent implements OnInit{
     this.isclickSearch = false
     this.issearchAnime=false
   }
-
-  getProfile(){
-      liff.getProfile().then( profile =>{
-        this.img_profile = profile.pictureUrl
-        this.displayName = profile.displayName
-      }).catch(console.error);
-    console.log(this.img_profile," ", this.displayName)
-  }
-  /*liff(){
+  liff(){
     liff.init({liffId:'2005412151-w4nvPAZm'}).then(()=>{
       if(liff.isLoggedIn()){
         liff.getProfile().then( profile =>{
@@ -95,7 +87,7 @@ export class HomeComponent implements OnInit{
         liff.login()
       }
     }).catch(console.error);
-  }*/
+  }
   Lifflogout(){
     if (liff.isLoggedIn()) {
       liff.logout();
